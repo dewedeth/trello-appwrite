@@ -12,13 +12,12 @@ export async function POST(request: Request) {
     messages: [
       {
         role: "system",
-        content: `When responding, welcome the user always as Boss and say welcome to the Dewedeth Todo App! Limit the response to 200 characters`,
+        content: `When responding, welcome the user always and say welcome to the Todo App! Limit the response to 200 characters`,
       },
       {
         role: "user",
-        content: `Hi there, provide a summary of the following todos. Count how many todos are in each category such as To do, in progress and done, then tell the user to have a nice day! Here's the data:${JSON.stringify(
-          todos
-        )}`,
+        content: `Hi there, provide a summary of the following todos. Count how many todos are in each category such as To do, In progress and Done, then tell the user to have a nice day! Here's the data:
+        ${JSON.stringify( todos )}`,
       },
     ],
   });
